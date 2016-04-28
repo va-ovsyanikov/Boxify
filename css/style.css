@@ -1,0 +1,481 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-size: 16px !important;
+}
+a{
+    color:#fff !important;
+    text-decoration: none !important;
+    -webkit-transition:0.3s;
+    transition: 0.3s;
+    outline: none !important;
+}
+._mPS2id-h{ /*класс для подсветки конкретного блока в меню*/
+    color: #de5e60;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: normal;
+    color: #ccc;
+}
+[class^=col-]{
+    padding: 0 !important;
+}
+.header_vid {
+    text-align: center;
+}
+.fon_picture {
+    display: none;
+}
+.fon_picture img{
+    width: 100%;
+    height: auto;
+}
+
+
+/*этот класс паралакса по умолчанию hidden
+-я сменил на visible т.к. плохо работал
+паралакс*/
+.parallax-mirror{
+    overflow: visible !important; 
+}
+.bgimg{
+    background-image: url(../img/природа.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+/*этот класс у скрипта PageScroll2id -чтобы активные
+ссылки загорались нужным  цветом*/
+.mPS2id-highlight{
+    color:#DE5E60 !important;
+}
+.header_menu{
+    background-color: rgba(0,0 ,0, 0.45);
+    padding: 0 22px;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    z-index: 20;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+}
+.bg_container {
+    display: inline-block;
+    left: 50%;
+    margin-left: -120px;
+    top: 50%;
+    margin-top: -40px;
+    position: absolute;
+    z-index:19;
+}
+.animate_delay{
+    -webkit-animation-delay: 6s;
+    animation-delay: 6s;
+}
+.bg_container h1{
+    font-size: 60px;
+    text-transform: uppercase;
+}
+.header_menu h2 {
+    font-size: 22px;
+    float: left;
+    line-height: 60px;
+}
+.header_menu li{
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 52px;
+}
+.header_menu ul{
+    float: right;
+    line-height: 60px;
+}
+.header_menu .icon-menu{
+    font-size: 20px;
+    color:#fff;
+    line-height: 60px;
+    float: right;
+    display: none;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.header_menu li:last-child{
+    margin-right: 0;
+}
+.header_menu a{
+    font-size: 15px;
+}
+.header_menu ul a:hover,
+.headhesive ul a:hover{
+    color: #DE5E60 !important;
+}
+.our_work {
+    background-color:#2F3238; 
+    overflow: hidden;
+    min-height: 700px;
+    padding-bottom: 90px;
+}
+.content_h{
+    text-align: center;
+    margin-top: 104px;
+    margin-bottom: 104px;
+}
+.content_h h2{
+    font-size: 40px;
+}
+.content_h h3{
+    font-size: 24px;
+}
+.type_of_work h3{
+    font-size: 24px;
+}
+.content_h a{
+    color: #DE5E60 !important;
+}
+.type_of_work ul{
+    width: 100%;
+}
+.type_of_work li{
+    list-style-type: none;
+    color: #66707C;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.type_of_work li.active{
+    color: #DE5E60;
+}
+.single_item{
+    display: inline-block;
+    width: 31%;
+    margin: 8px;
+}
+.single_item img{
+    max-width: 100%;
+    height: auto;
+}
+.single_item .overlay-img, .about_us_img .overlay-img{
+    position: absolute;
+    background-color: #de5e60;
+    cursor: pointer;
+    opacity: 0;
+    width: 100%;
+    height: 101%;
+    top:0;
+    left: 0;
+    -webkit-transform: rotateY(180deg) scale(0.5);
+    -webkit-transition: all 450ms ease-out 0s;
+    transform: rotateY(180deg) scale(0.5);
+    transition: all 450ms ease-out 0s;    
+}
+.single_item:hover .overlay-img,
+.single_item:active .overlay-img,
+.about_us_img:hover .overlay-img,
+.about_us_img:active .overlay-img{
+    opacity: 0.8;
+    -webkit-transform: rotateY(0deg) scale(1);
+    transform: rotateY(0deg) scale(1);
+
+}
+.single_item .overlay-img span,
+.about_us_img .overlay-img span{
+    color: #fff;
+    font-size: 45px;
+    left: 50%;
+    margin-left: -30px;
+    margin-top: -30px;
+    position: absolute;
+    top: 50%;
+}
+.about_us_img .overlay-img span{
+    font-size: 22px;
+    text-transform: uppercase;
+    margin-left: -80px;
+    margin-top: -15px;
+}
+
+.about_us{
+    background-color: #26292E;
+    overflow: hidden;
+    min-height: 1000px;
+    padding: 0 15px;
+}
+.about_us_item{
+    margin: 0 4%;
+    margin-bottom: 30px;
+}
+.about_us_img{
+    position: relative !important;
+}
+.about_us_img img{
+    width: 100%;
+    height: auto;
+}
+.about_us_item h3{
+    font-size: 25px;
+    margin-top: 27px;
+}
+.about_us_item p{
+    font-size: 16px;
+    color: #7f8289;
+    line-height: 28px;
+    margin-top: 15px;
+}
+.about_us_item  a, .contact_details a{
+    color: #de5e60 !important;
+}
+.social{
+    margin-top: 20px;
+}
+.social li{
+    list-style-type: none;
+    display: inline-block;
+}
+.social li span{
+    color: #7f8289;
+    font-size: 20px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+.social li span:hover{
+    color:#fff;
+}
+.contact{
+    min-height: 1000px;
+    background-color: #2F3238;
+    overflow: hidden;
+    padding: 0 15px;
+}
+.my_form{
+    width: 100%;
+}
+.my_form input {
+    background-color: #26292E;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-bottom: 1px solid #2F3238;
+    padding-left: 20px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: normal;
+}
+.my_form  textarea{
+    background-color: #26292E;
+    width: 100%;
+    height: 340px;
+    border: none;
+    padding-left: 20px;
+    padding-top: 10px;
+    color: #fff !important;
+    font-size: 15px;
+    font-weight: normal;
+    resize:vertical;
+}
+.my_form p{
+    color: #fff !important;
+}
+
+/*------------input---------*/
+
+.my_form input::-webkit-input-placeholder {
+    color: #fff;
+    font-size: 15px;
+}
+.my_form  input::-moz-placeholder{ /* Firefox 19+ */
+    color: #fff;
+    font-size: 15px;
+}
+.my_form  input:-moz-placeholder{ /* Firefox 18- */
+
+    color: #fff;
+    font-size: 15px;
+}
+.my_form  input:-ms-input-placeholder{
+    color: #fff;
+    font-size: 15px
+}
+/*-------textare----------------*/
+.my_form textarea::-webkit-textarea-placeholder {
+    color: #fff;
+    font-size: 15px;
+}
+.my_form  textarea::-moz-placeholder{ /* Firefox 19+ */
+    color: #fff;
+    font-size: 15px;
+}
+.my_form textarea:-moz-placeholder{ /* Firefox 18- */
+
+    color: #fff;
+    font-size: 15px;
+}
+.my_form  textarea:-ms-textarea-placeholder{
+    color: #fff;
+    font-size: 15px
+}
+.my_form input:focus::-webkit-input-placeholder {color: transparent;}
+.my_form input:focus::-moz-placeholder          {color: transparent;}
+.my_form input:focus:-moz-placeholder           {color: transparent;}
+.my_form  input:focus:-ms-input-placeholder      {color: transparent;} 
+
+.my_form textarea:focus::-webkit-input-placeholder {color: transparent;}
+.my_form textarea:focus::-moz-placeholder          {color: transparent;}
+.my_form textarea:focus:-moz-placeholder           {color: transparent;}
+.my_form  textarea:focus:-ms-input-placeholder      {color: transparent;} 
+
+.my_form button{
+    background-color: #3C3F45;
+    border: none;
+    outline: none;
+    width: 200px;
+    height: 60px;
+    margin-top: 30px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+.my_form button a{
+    color: #2F3238 !important; 
+    font-size: 18px;
+}
+.my_form button:hover{
+    background-color:#de5e60 ;
+}
+.my_form button:hover a{
+    color:#fff !important;
+}
+.contact_details{
+    color: #7f8289;
+    margin-left: 15%;
+    margin-bottom: 123px;
+}
+.contact_details li{
+    list-style-type: none;
+    margin-top: 22px;
+    white-space: nowrap;
+}
+.contact_details h3{
+    text-transform: uppercase;
+    font-size: 20px;
+    white-space: nowrap;
+}
+.block_twit{
+    width: 100%;
+    height: 250px;
+    background-color: #26292E;
+    position: relative;
+}
+.block_twit a{
+    position: absolute;
+    top:74%;
+    left: 50%;
+    font-size: 20px;
+
+}
+.block_twit span{
+    color: #de5e60;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+.block_twit span:hover{
+    color: #fff;
+}
+.block_soc{
+    width: 100%;
+    min-height:250px;
+    background-color: #2F3238;
+    text-align: center;
+    padding-top: 90px;
+    padding-bottom:90px;
+}
+.block_soc li{
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 30px;
+    line-height: 20px;
+}
+.block_soc li:last-child{
+    margin-right: 0;
+}
+.block_soc li a{
+    display: block;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    background-color: #26282E;
+    -webkit-transform: rotateY(180deg) ;
+    transform: rotateY(180deg) ;
+    -webkit-transition:all 0.4s;
+    transition:all 0.4s;
+}
+.block_soc li:hover a{
+    background-color:#de5e60 ;
+    -webkit-transform: rotateY(0) ;
+    transform: rotateY(0) ;
+}
+.block_soc li a span{
+    display: block;
+    font-size: 40px;
+    color: #343940;
+    opacity: 0.8;
+    -webkit-transform: rotateY(180deg) ;
+    transform: rotateY(180deg) ;
+    -webkit-transition:all 0.4s;
+    transition:all 0.4s;
+}
+.block_soc li:hover a span{
+    color: #fff;
+    opacity: 1;
+    -webkit-transform: rotateY(0) ;
+    transform: rotateY(0) ;
+
+}
+.copyr{
+    width: 100%;
+    min-height: 70px;
+    background-color: #26282E;
+    text-align: center;
+    padding-top:30px;
+}
+.copyr .copyr_icon{
+    position: relative;
+    top:-3px;
+    font-size: 11px;
+    left: -2px;
+}
+.copyr p{
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #fff;
+}   
+.copyr a{
+    color:#DE5E60 !important; 
+}
+.copyr a:hover{
+    color: #fff !important;
+}
+.top_bottom{ /* кнопка наверх*/
+    background-color: #000;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    display: block;
+    right: 0;
+    bottom: 0;
+    color:#000;
+    text-align: center;
+    line-height: 50px;
+}
+.top_bottom:hover{
+    background-color: #DE5E60;
+}
+.top_bottom.mPS2id-highlight{
+    display: none;
+}
+
+.parallax{
+    width: 100%;
+    min-height: 400px;
+    text-align: center;
+}
